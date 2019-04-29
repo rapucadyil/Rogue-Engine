@@ -29,3 +29,7 @@ void Entity::tick() {
 	cout << "Ticking...but this is private" << endl;
 }
 
+void Item::update() {}
+void Item::render() {}
+void Item::tick() {}
+

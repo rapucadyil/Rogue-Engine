@@ -10,10 +10,10 @@ public:
 	Entity(u32 id, const str name, bool active);
 	~Entity();
 
-	void update();
-	void render();
-private:
-	void tick();
+	virtual void update();
+	virtual void render();
+protected:
+	virtual void tick();
 
 };
 
@@ -30,4 +30,10 @@ public:
 	: Entity(id, name, active){
 		this->type = type;
 	}
+
+	void update() override;
+	void render() override;
+
+protected:
+	void tick() override;
 };

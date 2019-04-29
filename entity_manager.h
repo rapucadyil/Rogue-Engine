@@ -44,4 +44,12 @@ inline static void create_prefab(EntityManager *mgr, char req) {
 			break;
 		}
 	}
+	else if (typeid(T) == typeid(Item)) {
+		switch (req) {
+		case '!':
+			Item *heal = new Item(1, "Health Potion", true, ItemType::It_Potion);
+			mgr->m_entities.push_back(heal);
+			break;
+		}
+	}
 }
