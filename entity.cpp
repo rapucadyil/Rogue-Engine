@@ -1,5 +1,6 @@
 #include "entity.h"
 
+/* ENTITY CLASS */
 Entity::Entity() {
 	this->entity_id = 0;
 	this->entity_name = "entity";
@@ -29,6 +30,8 @@ void Entity::tick() {
 	cout << "Ticking...but this is private" << endl;
 }
 
+
+/* ITEM CLASS */
 void Item::update() {}
 void Item::render() {}
 void Item::tick() {}

@@ -1,20 +1,20 @@
 #include "definitions.h"
 #pragma once
 class Entity {
-public:
+    public:
 	u32 entity_id;
 	const str entity_name;
 	bool active;
-
+    
 	Entity();
 	Entity(u32 id, const str name, bool active);
 	~Entity();
-
+    
 	virtual void update();
 	virtual void render();
-protected:
+    protected:
 	virtual void tick();
-
+    
 };
 
 typedef enum ItemType {
@@ -24,16 +24,16 @@ typedef enum ItemType {
 };
 
 class Item : public Entity {
-public:
+    public:
 	ItemType type;
 	Item(u32 id, const str name, bool active, ItemType type)
-	: Entity(id, name, active){
+        : Entity(id, name, active){
 		this->type = type;
 	}
-
+    
 	void update() override;
 	void render() override;
-
-protected:
+    
+    protected:
 	void tick() override;
 };
