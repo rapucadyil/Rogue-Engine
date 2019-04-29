@@ -1,0 +1,3 @@
+﻿  entry.cpp
+c:\users\rj-graphics\documents\gamedev\rlengine\entity_manager.h(11): warning C4091: 'typedef ': ignored on left of 'Prefab' when no variable is declared
+  RLEngine.vcxproj -> C:\Users\RJ-Graphics\Documents\GameDev\RLEngine\Debug\RLEngine.exe
